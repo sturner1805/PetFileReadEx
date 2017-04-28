@@ -1,69 +1,67 @@
 
 import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class Main {
+	
+	static ArrayList<Person> personList = new ArrayList<Person>();
+	static ArrayList<Animal> animalList = new ArrayList<Animal>();
+	
 	public static void main(String[]args){
-		
-		//String file_name = "C:\Users\Administrator\Desktop\eclipse\ExData"
 		
 		try{
 			File x = new File ("C:\\Users\\Administrator\\Desktop\\eclipse\\ExData.txt");
 			Scanner sc = new Scanner(x);
-			String input  ="";
+			String input  = "";
 			while(sc.hasNext()){
-				input += sc.next()+"\n";
+				input += sc.nextLine() + "\n";
 			}
 			sc.close();		
 			
-			String[] firstBlocks = input.split("\n");
-			System.out.println(firstBlocks[3]);
-//			String people = firstBlocks[0];
-//			String animals = firstBlocks[1];
-//			String[] secondBlocksPe = people.split("%");
-//			String[] secondBlocksAn = animals.split("%");
-//			for(int i=0 ; i <= secondBlocksPe.length ; i=i+5){
-//				String[] names = people.split("\n");
-//				System.out.println(names[1]);
+			peopleExtractor(input);
+			animalExtractor(input);
+//			for (Animal a : animalList){
+//				System.out.println(a.getName());
 //			}
 			
-			
-			
-			
-			//String[] names = secondBlocksPe[0, 6, 12];
-			//System.out.println(secondBlocks[6]);
-//			String gareth = secondBlocksPe[0];
-//			String devdetta = secondBlocksPe[1];
-//			String elliott = secondBlocksPe[2];
-//			
-//			String[] secondBlocksAn = animals.split("%");
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-//			String s1 = sc.next();
-//			String[] word = s1.split("\\s");
-//			for (String w : word){
-//				System.out.println(w);
-//			}
 
+		}catch(Exception e){
 		}
-			catch(Exception e){
-			}
+	}
+
+	public static void peopleExtractor(String input){
+		String[] group = input.split("&");
+		String people = group[0];
 		
+		String[] person = people.split("%");
+		for(int i=0 ; i < person.length ; i++){
+			String personDetails = person[i];
+			String[] individual = personDetails.trim().split("\n");
+			String name = individual[0];
+			String dob = individual[1];
+			String job = individual[2];
+			String tempSalary = individual[3];
+			tempSalary = tempSalary.replace("£","").replace("Â", "");
+			int salary = Integer.parseInt(tempSalary);
+			Person p = new Person (name, dob, job, salary);
+			personList.add(p);
+		}
+	}
 	
+	public static void animalExtractor(String input){
+		String[] group = input.split("&");
+		String animals = group[1];
+		
+		String[] animal = animals.split("%");
+		for(int i=0 ; i < animal.length ; i++){
+			String animalDetails = animal[i];
+			String[] individual = animalDetails.trim().split("\n");
+			String name = individual[0];
+			String species = individual[1];
+			Animal a = new Animal (name, species);
+			animalList.add(a);
+		}
 	}
 }
-			//String data = sc.next();
-			//String[] people = ; 
-			//for(String w : data.split("\\s",0))
-			//	System.out.print(data);

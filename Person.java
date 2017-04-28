@@ -1,18 +1,18 @@
 
 public class Person {
-	
-	String name;
-	String dob;
-	String job;
-	int salary;
-	
-	Person (String name, String dob, String job, int salary) {
-	this.setName(name);
-	this.setDob(dob);
-	this.setJob(job);
-	this.setSalary(salary);;
-	}	
-	
+
+	private String name;
+	private String dob;
+	private String job;
+	private int salary;
+
+	Person(String name, String dob, String job, int salary) {
+		this.name = name;
+		this.dob = dob;
+		this.job = job;
+		this.salary = salary;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -44,7 +44,4 @@ public class Person {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	
-	
-	
 }
