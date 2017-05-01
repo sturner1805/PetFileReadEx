@@ -5,7 +5,7 @@ public class Person {
 	private String dob;
 	private String job;
 	private int salary;
-
+	
 	Person(String name, String dob, String job, int salary) {
 		this.name = name;
 		this.dob = dob;

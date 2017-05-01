@@ -2,7 +2,7 @@
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//edit edit edit edit
 
 public class Main {
 	
@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String[]args){
 		
 		try{
-			File x = new File ("C:\\Users\\Administrator\\Desktop\\eclipse\\ExData.txt");
+			File x = new File ("C:\\Users\\Sam\\Google Drive\\BAE\\NSAc\\Java\\ExData.txt");
 			Scanner sc = new Scanner(x);
 			String input  = "";
 			while(sc.hasNext()){
@@ -22,9 +22,11 @@ public class Main {
 			
 			peopleExtractor(input);
 			animalExtractor(input);
-//			for (Animal a : animalList){
-//				System.out.println(a.getName());
-//			}
+			for (Animal a : animalList){
+				System.out.println(a.getName());
+				System.out.println(a.getspecies());
+			}
+			personList.get(0);
 			
 
 		}catch(Exception e){
@@ -64,4 +66,14 @@ public class Main {
 			animalList.add(a);
 		}
 	}
+	
+//	public static void petAssignment(String person, String pet){
+//		int i;
+//		int j;
+//		Person owner = personList.get(i);
+//		Animal owned = animalList.get(j);
+//		if (i == 0){
+//			j = 
+//		}
+//	}
 }
