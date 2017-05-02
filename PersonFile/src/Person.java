@@ -11,9 +11,9 @@ public class Person {
 		this.age = age;	
 	}
 	
-	static Person marc = new Person("Marc", " Ballr", 23);
-	static Person hassan = new Person ("Hassan", " Woah", 21);
-	static Person kieran = new Person ("Kieran", "n Alcoholic", 22);
-	static Person sam = new Person ("Sam", " Pretentious Twat", 22);
-	static Person gareth = new Person ("Gareth", " Beard", 30);
+	static Person marc = new Person("Marc", "Ballr-Leadr", 23);
+	static Person hassan = new Person ("Hassan", "Woah-Ballr", 21);
+	static Person kieran = new Person ("Kieran", "Alcoholic Ballr", 22);
+	static Person sam = new Person ("Sam", "Pretentious Ballr", 22);
+	static Person gareth = new Person ("Gareth", "Bearded Ballr", 30);
 }
