@@ -3,11 +3,15 @@ import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.util.Scanner;
+
 public class ChessBoard extends JPanel {
 	
 	public static void main(String[]args){
 		ChessBoard mainBoard = new ChessBoard();
 		mainBoard.logic();
+		mainBoard.movePiece(0,0,1,1);
+		mainBoard.displayBoard();
 		//System.out.print(mainBoard.board[0][0]);
 		//mainBoard.draw();
 	}
@@ -55,7 +59,11 @@ public class ChessBoard extends JPanel {
 		 for(int i=0 ; i < pieces.length ; i++){
 			 placePiece(pieces[i], this.board);
 		 }
-		 for(int ii = 0; ii < 8; ii++){
+		 displayBoard();
+	}
+	
+	public void displayBoard(){
+		for(int ii = 0; ii < 8; ii++){
 			 for(int jj = 0; jj < 8; jj++){
 				 System.out.print(this.board[ii][jj]);
 			 }
@@ -129,5 +137,10 @@ public class ChessBoard extends JPanel {
 		}
 		int yCoord = 8+(-1*Integer.parseInt(piece[1].substring(1)));
 		c[yCoord][xCoord] = symbol;
+	}
+	
+	public void movePiece(int x1, int y1, int x2, int y2){
+		this.board[x2][y2] = this.board[x1][y1];
+		this.board[x1][y1] = '\u2003';
 	}
 }
