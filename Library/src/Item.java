@@ -1,20 +1,18 @@
-import java.util.ArrayList;
 
 public abstract class Item implements Library{
 	
-	public static ArrayList <Item> catalogue = new ArrayList <Item>();
 	
 	
 	static String status;
 	static int itemID;
-	String title;
+	static String title;
 	static String publisher;
 
 	public Item (String status, int itemID, String title, String publisher){
-		Item.status = status;
-		Item.itemID = itemID;
+		this.status = status;
+		this.itemID = itemID;
 		this.title = title;
-		Item.publisher = publisher;
+		this.publisher = publisher;
 	}
 	
 	public static String getStatus() {
@@ -25,34 +23,34 @@ public abstract class Item implements Library{
 		Item.status = status;
 	}
 
-//	public int getItemID() {
-//		return itemID;
-//	}
-//
-//	public void setItemID(int itemID) {
-//		Item.itemID = itemID;
-//	}
-//
-//	public String getTitle() {
-//		return title;
-//	}
-//
-//	public void setTitle(String title) {
-//		Item.title = title;
-//	}
-//
-//	public String getPublisher() {
-//		return publisher;
-//	}
-//
-//	public void setPublisher(String publisher) {
-//		Item.publisher = publisher;
-//	}
+	public int getItemID() {
+		return itemID;
+	}
 
-	public abstract void checkOut();
-	public abstract void checkIn();
-	public abstract void addItem();
-	public abstract void removeItem();
-	public abstract void updateItem();
+	public void setItemID(int itemID) {
+		this.itemID = itemID;
+	}
+
+	public static String getTitle() {
+		return title;
+	}
+
+	public static void setTitle(String title) {
+		this.title = title;
+	}
+
+	public static String getPublisher() {
+		return publisher;
+	}
+
+	public static void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+
+	public abstract void returnItem();
+	public abstract void lendItem();
+	public abstract void add();
+	public abstract void delete();
+	public abstract void update();
 		
 }
