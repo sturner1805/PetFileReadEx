@@ -6,7 +6,7 @@ public abstract class Customer implements Library{
 	int age;
 	String email;
 	
-	private Customer(int customerID, String name, int age, String email){
+	public Customer(int customerID, String name, int age, String email){
 		this.customerID = customerID;
 		this.name = name;
 		this.age = age;
@@ -14,18 +14,8 @@ public abstract class Customer implements Library{
 		
 	}
 	
-	public void registerPerson() {
-		
-		
-	}
+	public abstract void registerPerson();
+	public abstract void deletePerson();
+	public abstract void updatePerson();
 	
-	public void deletePerson() {
-		
-		
-	}
-
-	public void updatePerson() {
-		
-		
-	}
 }
