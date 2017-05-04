@@ -42,6 +42,7 @@ public class Garage {
 //			int age = sc.nextInt();
 //			System.out.println("Enter milage.");
 //			int mileage = sc.nextInt();
+// 			continue;
 //		}
 //			switch (vehicleType){
 //				case "car":
