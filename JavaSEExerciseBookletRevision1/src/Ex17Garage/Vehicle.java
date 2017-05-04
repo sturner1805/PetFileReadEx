@@ -3,16 +3,34 @@ package Ex17Garage;
 public class Vehicle {
 	
 	int id;
+	String type;
 	String makeModel;
 	int age;
 	int mileage;
 	
-	public Vehicle (int id, String makeModel, int age, int mileage){
+	public Vehicle (int id, String type, String makeModel, int age, int mileage){
 		
 		this.id = id;
+		this.type = type;
 		this.makeModel = makeModel;
 		this.age = age;
 		this.mileage = mileage;	
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getMakeModel() {
+		return makeModel;
+	}
+
+	public void setMakeModel(String makeModel) {
+		this.makeModel = makeModel;
 	}
 
 	public int getId() {
@@ -21,14 +39,6 @@ public class Vehicle {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getmakeModel() {
-		return makeModel;
-	}
-
-	public void setmakeModel(String makeModel) {
-		this.makeModel = makeModel;
 	}
 
 	public int getAge() {

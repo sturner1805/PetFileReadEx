@@ -5,8 +5,8 @@ public class Motorcycle extends Vehicle{
 	int panniers;
 	String style;
 	
-	public Motorcycle(int id, String makeModel, int age, int mileage, int panniers, String style){
-		super (id, makeModel, age, mileage);
+	public Motorcycle(int id, String type, String makeModel, int age, int mileage, int panniers, String style){
+		super (id, type, makeModel, age, mileage);
 		this.panniers = panniers;
 		this.style = style;
 	}
