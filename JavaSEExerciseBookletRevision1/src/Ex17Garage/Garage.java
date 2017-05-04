@@ -30,7 +30,10 @@ public class Garage {
 //	public static void addVehicle(){
 //		System.out.println("Enter vehicle type.");
 //		String vehicleType = sc.nextLine();
-//		
+//		if(vehicleType != "car" && vehicleType != "motorcycle"){
+// 			System.out.println("Error");
+// 			return;
+// 		}else{
 //			int id = 0; 
 //			int newId =	id+1;
 //			System.out.println("Enter make and model.");
@@ -39,7 +42,7 @@ public class Garage {
 //			int age = sc.nextInt();
 //			System.out.println("Enter milage.");
 //			int mileage = sc.nextInt();
-//		
+//		}
 //			switch (vehicleType){
 //				case "car":
 //					System.out.println("Enter number of doors");
