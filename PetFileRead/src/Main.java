@@ -10,9 +10,13 @@ public class Main {
 	static ArrayList<Animal> animalList = new ArrayList<Animal>();
 	
 	public static void main(String[]args){
-		
+		fileRead();
+		assignPet(Gareth, Cosmo);
+			}
+
+	private static void fileRead(){
 		try{
-			File x = new File ("C:\\Users\\Sam\\Google Drive\\BAE\\NSAc\\Java\\ExData.txt");
+			File x = new File ("C:\\Users\\Administrator\\Desktop\\eclipse\\exData.txt");
 			Scanner sc = new Scanner(x);
 			String input  = "";
 			while(sc.hasNext()){
@@ -22,8 +26,9 @@ public class Main {
 			
 			peopleExtractor(input);
 			animalExtractor(input);
+			//assignPet(p,a);
 			for (Animal a : animalList){
-				System.out.println(a.getName());
+				System.out.println(a.getPetName());
 				System.out.println(a.getspecies());
 			}
 			personList.get(0);
@@ -31,8 +36,13 @@ public class Main {
 
 		}catch(Exception e){
 		}
-	}
 
+	}
+	
+	public static void assignPet(Person p, Animal a){
+		p.ownPet(a);
+	}
+	
 	public static void peopleExtractor(String input){
 		String[] group = input.split("&");
 		String people = group[0];

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Person {
 
@@ -5,6 +6,7 @@ public class Person {
 	private String dob;
 	private String job;
 	private int salary;
+	private ArrayList <Animal> pets = new ArrayList <Animal>();
 	
 	Person(String name, String dob, String job, int salary) {
 		this.name = name;
@@ -43,5 +45,15 @@ public class Person {
 
 	public void setSalary(int salary) {
 		this.salary = salary;
+	}
+	
+	public void ownPet(Animal a) {
+		pets.add(a);
+	}
+	public ArrayList<Animal> getPets() {
+		return pets;
+	}
+	public void setPets(ArrayList<Animal> pets) {
+		this.pets = pets;
 	}
 }

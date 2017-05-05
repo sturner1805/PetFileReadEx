@@ -1,20 +1,20 @@
 
 public class Animal {
 	
-	private String name;
+	private String petName;
 	private String species;
 	
-	Animal(String name, String species){
-		this.name=name;
+	Animal(String petName, String species){
+		this.petName=petName;
 		this.species=species;
 	}
 
-	public String getName() {
-		return name;
+	public String getPetName() {
+		return petName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setPetName(String petName) {
+		this.petName = petName;
 	}
 
 	public String getspecies() {
