@@ -104,9 +104,11 @@ public class Garage {
 				break;
 			}
 		}
-			
-		
 //		return ident;
+	}
+	
+	public static void emptyGarage(){
+		garage.removeAll(garage);
 	}
 }
 
